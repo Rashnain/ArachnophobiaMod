@@ -1,0 +1,12 @@
+# IDE
+.idea/
+Folder.DotSettings.user
+.vs/
+
+# .NET
+bin/
+lib/
+obj/
+
+# Blender backups
+*.blend[0-9]*
