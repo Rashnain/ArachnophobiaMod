@@ -1,0 +1,9 @@
+{
+    "name": "ArachnophobiaMod",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Rashnain/ArachnophobiaMod",
+    "description": "A Lethal Company mod that replaces spiders with cats (model and sounds)",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}
