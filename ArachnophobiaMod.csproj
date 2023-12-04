@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
     <AssemblyName>ArachnophobiaMod</AssemblyName>
-    <Description>A Lethal Company mod that replaces the spider model with a cat</Description>
+    <Description>A Lethal Company mod that replaces spiders with cats (model and sounds)</Description>
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
