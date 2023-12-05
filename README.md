@@ -1,13 +1,9 @@
 # ArachnophobiaMod
 
-<img width="64" style="margin-right: 10px" align="left" src="Thunderstore/icon.png" alt="ArachnophobiaMod icon">
-
 A Lethal Company mod that replaces spiders with cats (model and sounds).
 
----
-
 <a href="https://thunderstore.io/c/lethal-company/p/Rashnain/ArachnophobiaMod/">
-<img width="150" src="Thunderstore/available_on_thunderstore.png" alt="Available on Thunderstore">
+ <img width="150" src="Thunderstore/available_on_thunderstore.png" alt="Available on Thunderstore">
 </a>
 
 Also changes the bestiary video and replaces spider noises with cat sounds.
