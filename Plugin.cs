@@ -13,7 +13,7 @@ public class Plugin : BaseUnityPlugin
 {
     private const string GUID = "com.github.rashnain.arachnophobiamod";
     private const string Name = "ArachnophobiaMod";
-    private const string Version = "1.0.0";
+    private const string Version = "1.0.1";
 
     private static readonly Harmony Harmony = new(GUID);
 
@@ -32,7 +32,6 @@ public class Plugin : BaseUnityPlugin
         Log = Logger;
 
         AssetBundle assetBundle = AssetBundle.LoadFromMemory(GetResourceBytes("cat"));
-
         Cat = assetBundle.LoadAsset<GameObject>("assets/Cat.prefab");
         CatVideo = assetBundle.LoadAsset<VideoClip>("assets/CatVideo0001-0100.mp4");
         CatStunSFX = assetBundle.LoadAsset<AudioClip>("assets/StunCat.mp3");

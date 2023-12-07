@@ -10,9 +10,10 @@ internal class SandSpiderAIPatch
     private static Dictionary<SandSpiderAI, float> _timeSinceMovingLegs;
 
     [HarmonyPatch(typeof(SandSpiderAI), "Start")]
-    [HarmonyPostfix]
+    [HarmonyPrefix]
     public static void Start(SandSpiderAI __instance)
     {
+        _timeSinceMovingLegs ??= new Dictionary<SandSpiderAI, float>();
         _timeSinceMovingLegs.Add(__instance, Random.Range(0.1f, 0.9f));
 
         __instance.gameObject.transform.Find("MeshContainer/MeshRenderer").gameObject.GetComponent<SkinnedMeshRenderer>().enabled = false;
@@ -61,12 +62,5 @@ internal class SandSpiderAIPatch
         Vector3 angles = cat.localEulerAngles;
         cat.localEulerAngles = new Vector3(angles.x, angles.y, -90f);
         cat.localPosition = new Vector3(0f, 0f, 0f);
-    }
-
-    [HarmonyPatch(typeof(StartOfRound), "StartGame")]
-    [HarmonyPostfix]
-    private static void StartGame(StartOfRound __instance)
-    {
-        _timeSinceMovingLegs = new Dictionary<SandSpiderAI, float>();
     }
 }
