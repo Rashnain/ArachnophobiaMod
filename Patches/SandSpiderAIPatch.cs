@@ -56,7 +56,7 @@ internal class SandSpiderAIPatch
 
     [HarmonyPatch(typeof(SandSpiderAI), "KillEnemy")]
     [HarmonyPostfix]
-    public static void KillEnemy(SandSpiderAI __instance, object[] __args)
+    public static void KillEnemy(SandSpiderAI __instance)
     {
         Transform cat = __instance.gameObject.transform.Find("MeshContainer/ScanNode/Cat(Clone)").transform;
         Vector3 angles = cat.localEulerAngles;

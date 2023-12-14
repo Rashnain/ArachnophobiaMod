@@ -1,7 +1,6 @@
 ﻿using System.IO;
 using System.Reflection;
 using BepInEx;
-using BepInEx.Logging;
 using HarmonyLib;
 using UnityEngine;
 using UnityEngine.Video;
@@ -17,8 +16,6 @@ public class Plugin : BaseUnityPlugin
 
     private static readonly Harmony Harmony = new(GUID);
 
-    internal static ManualLogSource Log;
-
     internal static GameObject Cat;
     internal static VideoClip CatVideo;
     internal static AudioClip CatStunSFX;
@@ -29,8 +26,6 @@ public class Plugin : BaseUnityPlugin
 
     private void Awake()
     {
-        Log = Logger;
-
         AssetBundle assetBundle = AssetBundle.LoadFromMemory(GetResourceBytes("cat"));
         Cat = assetBundle.LoadAsset<GameObject>("assets/Cat.prefab");
         CatVideo = assetBundle.LoadAsset<VideoClip>("assets/CatVideo0001-0100.mp4");
